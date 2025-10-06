@@ -36,6 +36,10 @@ aside {
     /* background-color: #016bd4; */
 }
 
+h1 {
+    font-size: 24px;
+}
+
 img {
     height: 40px;
 }
@@ -84,4 +88,18 @@ button {
     margin-bottom: 10px;
     bottom: 0;
     position: absolute;
+}
+
+.view-stu-btn {
+    padding: 10px 11px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #000;
+    border: 1.5px solid #c9c9c9;
+    border-radius: 8px;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;  
+    width: 20%;
 }
