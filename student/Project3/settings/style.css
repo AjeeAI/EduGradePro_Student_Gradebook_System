@@ -1,0 +1,182 @@
+@import
+url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+html, body {
+  height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    color: #333;
+    display: flex;
+    /* overflow: auto; */
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+button{
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    background-color: #0f172a;
+    color: #f8fafc;
+    border: none;
+    justify-content: left;
+    display: flex;
+}
+
+.settings{
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    background-color: #0ea5e9;
+    color: #f8fafc;
+    border: none;
+    justify-content: left;
+    display: flex;
+}
+
+button:hover{
+    background-color: #0ea5e9;
+}
+
+.logout {
+    display: flex;
+    justify-content: center;
+  position: absolute;
+  bottom: 20px; 
+  left: 20px;   
+  right: 20px; 
+  background-color: #0f172a;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 120px;
+  font-size: larger;
+}
+
+.logout:hover {
+  background-color: #ef4444;
+}
+
+.profile{
+    display: flex;
+    gap: 5px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    text-align: center; 
+    width: 100%;
+}
+.left {
+    width: 300px;
+    background-color: #0f172a;
+    color: white;
+    display: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.right {
+    width: 85%;
+    background-color: #f8fafc;
+    padding: 20px;
+}
+
+h3{
+    display: flex;
+    margin-bottom: 5px;
+    padding-top: 10px;
+}
+
+.newb{
+    background-color: rgb(17, 82, 203);
+    width: 120px;
+    border-radius: 10px;
+}
+
+.newb2{
+    background-color: rgb(17, 82, 203);
+    width: 150px;
+    border-radius: 10px;
+}
+
+.newbtn{
+    padding-top: 10px;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+}
+
+label{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.card1{
+    display: flex;
+    flex-direction: column;
+    
+    background-color: white;
+    padding: 10px;
+    border-radius: 16px;
+    width: 99%;
+    height: 240px;
+    margin-top: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1)
+}
+
+.card2{
+    display: flex;
+    flex-direction: column;
+    
+    background-color: white;
+    padding: 10px;
+    border-radius: 16px;
+    width: 99%;
+    height: 320px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1)
+}
+
+
+
+h1{
+    margin-top: 10px;
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+
+
+
+
+.profile{
+    margin-top: 20px;
+}

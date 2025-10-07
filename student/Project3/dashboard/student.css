@@ -1,0 +1,177 @@
+@import
+url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+html, body {
+  height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    color: #333;
+    display: flex;
+    /* overflow: auto; */
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+button{
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    background-color: #0f172a;
+    color: #f8fafc;
+    border: none;
+    justify-content: left;
+    display: flex;
+}
+
+.dash{
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    background-color: #0ea5e9;
+    color: #f8fafc;
+    border: none;
+    justify-content: left;
+    display: flex;
+}
+
+button:hover{
+    background-color: #0ea5e9;
+}
+
+.logout {
+    display: flex;
+    justify-content: center;
+  position: absolute;
+  bottom: 20px; /* distance from bottom */
+  left: 20px;   /* align with the sidebar’s padding */
+  right: 20px;  /* keep same spacing on right */
+  background-color: #0f172a;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 120px;
+  font-size: larger;
+}
+
+.logout:hover {
+  background-color: #ef4444;
+}
+
+.profile{
+    display: flex;
+    gap: 5px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.left {
+    width: 300px;
+    background-color: #0f172a;
+    color: white;
+    display: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.right {
+    width: 85%;
+    background-color: #f8fafc;
+    padding: 20px;
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    margin-top: 30px;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card{
+    background-color: white;
+    padding: 10px;
+    border-radius: 16px;
+    width: 580px;
+    height: 80px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1)
+}
+
+h1{
+    margin-top: 10px;
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.gbtn{
+    display: flex;
+    gap: 10px;
+}
+
+.sidebtn{
+    background-color: white;
+    color: #0f172a;
+    border: 1px solid;
+    border-radius: 18%;
+}
+
+.asidebtn{
+    background-color: #0ea5e9;
+    color: #0f172a;
+    border: 1px solid;
+    border-radius: 18%;
+}
+
+.det{
+    background-color: #e7f6fd;
+    width: 140px;
+    height: 30px;
+    color: #36b2ef;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.det:hover{
+    background-color: #e7f6fd;
+}
+
+.detailbtn{
+    display: flex;
+    justify-content: right;
+    padding-right: 10px;
+}
