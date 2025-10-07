@@ -13,43 +13,104 @@
             <img src="Screenshot 2025-10-05 222657.png" alt="curved edged square">
             <h1>EduGrade Pro</h1>
         </div>
-        <button class="home-btn">
+        <button class="home-btn" id="homeBtn">
             <i class="fa-regular fa-house"></i>
             Dashboard Home
         </button>
-        <button>
+        <button id="Student-btn">
             <i class="fa-solid fa-users"></i>
             Students
         </button>
-        <button>
+        <button id="gradebook">
             <i class="fa-regular fa-star"></i>
             Gradebook
         </button>
-        <button>
+        <button id="report-btn">
             <i class="fa-solid fa-chart-column"></i>
             Reports
         </button>
-        <button>
+        <button id="settings">
             <i class="fa-solid fa-gear"></i>
             Settings
         </button>
-        <button>
+        <button id="help">
             <i class="fa-solid fa-circle-question"></i>
             Help
         </button>
-        <button class="add-btn">
+        <button class="add-btn" id="addBtn">
             Add New Student
         </button>
     </aside>
     <main>
         <header>
             <h2>Welcome, Ms. Johnson!</h2>
-            <div>
-                <button class="view-stu-btn">
-                    View All Students
-                </button>
+            <div class="img-btn-cont">
+                <div class="header-btn">
+                    <button class="view-stu-btn" id="viewStuBtn">
+                        View All Students
+                    </button>
+                    <button class="gradebook-btn" id="gradebookBtn">
+                        Go to Gradebook
+                    </button>
+                </div>
+                <img src="Screenshot 2025-10-07 015331.png" alt="display picture" class="dp">
             </div>
         </header>
+
+        <h3>Dashboard Overview</h3>
+
+        <div class="cards">
+            <div class="card1">
+                <p>Total Students</p>
+                <h2 id="totalStud">150</h2>
+            </div>
+            <div class="card2">
+                <p>Active Classes</p>
+                <h2 id="activeClasses">3</h2>
+            </div>
+            <div class="card3">
+                <p>Average Grade</p>
+                <h2 id="aveGrad">B</h2>
+            </div>
+            <div class="card4">
+                <p>Assignments Due</p>
+                <h2 id="assDue">5</h2>
+            </div>
+        </div>
+
+        <div class="student-roster">
+            <h4>Student Roster</h4>
+            <div class="filter-cont">
+                <div class="input-cont">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="searchInput" placeholder="Search students..." class="search-input">
+                </div>
+                <div class="filter-btn">
+                    <button class="filter" id="all">
+                        All
+                    </button>
+                    <button class="filter-class" id="ss1">
+                        SS1
+                    </button>
+                    <button class="filter-class" id="ss2">
+                        SS2
+                    </button>
+                    <button class="filter-class" id="ss2">
+                        SS3
+                    </button>
+                </div>
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <td>STUDENT NAME</td>
+                    <td>STUDENT ID</td>
+                    <td>CLASS</td>
+                    <td class="action">ACTIONS</td>
+                </tr>
+            </thead>
+        </table>
     </main>
 </body>
 </html>
