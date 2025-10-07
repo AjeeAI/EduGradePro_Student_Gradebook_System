@@ -167,7 +167,7 @@ h3 {
 
 .card1, .card2, .card3, .card4 {
     background-color: #ffffff;
-    color: #13a4ec;
+    color: #5a8aa2;
     font-size: 22px;
     padding: 38px 20px;
     width: 25%;
@@ -253,10 +253,54 @@ h4 {
 
 table {
     width: 100%;
+    background-color: #f1f5f9;
+    border-radius: 8px;
+    margin-top: 20px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    overflow: hidden;
+}
+
+th {
+    border-bottom: 1px solid #e9ecef;
+    padding: 24px 12px;
+    text-align: left;
+    color: #5a8aa2;
+    font-weight: 600;
+}
+
+tbody {
     background-color: #fff;
-    padding: 24px 20px;
+}
+
+td {
+    padding: 24px 12px;
+    text-align: left;
+    color: #5a8aa2;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.stud-name {
+    color: #000;
 }
 
 .action {
     text-align: right;
+}
+
+.action-td {
+    justify-content: right;
+    display: flex;
+}
+
+.eyeBtn {
+    width: auto;
+    background-color: #fff;
+    color: #5a8aa2;
+}
+
+.deleteBtn {
+    width: auto;
+    background-color: #fff;
+    color: #ff0000;
 }
