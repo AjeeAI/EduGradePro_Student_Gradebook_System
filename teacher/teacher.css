@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    /* box-sizing: border-box; */
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
@@ -23,8 +24,9 @@ aside {
     color: #ebedef;
     padding: 0px 16px;
     min-height: 100vh;
-    /* display: flex;
-    flex-direction: column; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* position: fixed; */
 }
 
 .logo {
@@ -93,6 +95,7 @@ button {
 /* main content */
 main {
     padding: 48px 40px;
+    
 }
 
 h2 {
@@ -162,6 +165,7 @@ h3 {
     margin-top: 22px;
     display: flex;
     gap: 28px;
+    /* flex-wrap: wrap; */
 
 }
 
@@ -304,3 +308,95 @@ td {
     background-color: #fff;
     color: #ff0000;
 }
+
+
+
+/* student page style */
+.header-sub-text {
+    padding-top: 10PX;
+    color: #646464;
+}
+
+.addstud-btn {
+    padding: 14px 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #13a4ec;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;  
+    width: 200px;
+}
+
+.stdentlist-cont {
+    background-color: #fff;
+    margin-top: 28px;
+    padding: 28px 28px;
+    border-radius: 8px;
+}
+
+.input-cont2 {
+    margin-right: 28px;
+}
+
+.studpage-search-input {
+    padding: 12px;
+    font-size: 18px;
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+}
+
+
+
+/* settings page */
+.settings-conts {
+    background-color: #fff;
+    padding: 20px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.profile {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 16px;
+}
+
+label {
+    font-size: 18px;
+    padding-bottom: 8px;
+}
+
+.change-info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.settings-info-input {
+    padding: 12px 12px;
+    border-radius: 6px;
+    border: 2px solid #ddd;
+}
+
+.updateprofile {
+    padding: 14px 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #13a4ec;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 10px;  
+    width: 12%
+}
+
+/* add student style */
+

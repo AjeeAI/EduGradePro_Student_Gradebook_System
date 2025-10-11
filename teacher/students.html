@@ -3,9 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Students</title>
+    <link rel="stylesheet" href="teacher.css">
 </head>
 <body>
-    
+    <aside>
+        <div class="logo">
+            <img src="Screenshot 2025-10-05 222657.png" alt="curved edged square">
+            <h1>EduGrade Pro</h1>
+        </div>
+        <button class="home-btn">
+            <i class="fa-regular fa-house"></i>
+            Dashboard Home
+        </button>
+        <button>
+            <i class="fa-solid fa-users"></i>
+            Students
+        </button>
+        <button>
+            <i class="fa-regular fa-star"></i>
+            Gradebook
+        </button>
+        <button>
+            <i class="fa-solid fa-chart-column"></i>
+            Reports
+        </button>
+        <button>
+            <i class="fa-solid fa-gear"></i>
+            Settings
+        </button>
+        <button>
+            <i class="fa-solid fa-circle-question"></i>
+            Help
+        </button>
+        <button class="add-btn">
+            Add New Student
+        </button>
+    </aside>
+    <main>
+        <header>
+            <div>
+                <h2>Students Management</h2>
+                <p class="header-sub-text">Manage student records and enrollments</p>
+            </div>
+            <button class="addstud-btn" id="addstud-btn">
+                <i class="fa-solid fa-plus"></i>
+                Add New Student
+            </button>
+        </header>
+        
+        <div class="stdentlist-cont">
+            <div class="input-cont2">
+                <input type="text" id="searchInput" placeholder="Search students..." class="studpage-search-input">
+            </div>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>STUDENT NAME</th>
+                        <th>STUDENT ID</th>
+                        <th>CLASS</th>
+                        <th>ENROLLED COURSES</th>
+                        <th>AVERAGE GRADE</th>
+                        <th class="action">ACTIONS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="stud-name">Alice Smith</td>
+                        <td>S001</td>
+                        <td>SS1</td>
+                        <td>3</td>
+                        <td>83%</td>
+                        <td class="action-td">
+                            <button class="eyeBtn">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+                            <button class="deleteBtn">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
 </body>
 </html>
