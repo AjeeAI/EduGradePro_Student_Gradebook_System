@@ -26,6 +26,13 @@ function setActiveButton(activeId) {
   });
 }
 
+let gradebookButton = document.getElementById("gradebookButton");
+if (gradebookButton) {
+  gradebookButton.addEventListener("click", () => {
+    window.location.href = "gradebook.html";
+  });
+}
+
 // Detect which page is active (based on URL)
 const currentPage = window.location.pathname.split("/").pop();
 Object.keys(navMap).forEach((id) => {
@@ -159,3 +166,37 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+let totalStud = document.getElementById("totalStud");
+totalStud.innerText = getStudents().length;
+function getStudents() {
+  return JSON.parse(localStorage.getItem("students")) || [];
+}
+
+let activeClasses = document.getElementById("activeClasses");
+activeClasses.innerText = getActiveClassesCount();
+
+function getActiveClassesCount() {
+  const students = getStudents();
+  const classes = students.map(s => s.class);
+  return new Set(classes).size;
+}
+
+let aveGrad = document.getElementById("aveGrad");
+aveGrad.innerText = getAverageGrade();  
+function getAverageGrade() {
+  const students = getStudents();
+  if (students.length === 0) return "N/A";
+  const total = students.reduce((sum, s) => sum + (parseFloat(s.grade) || 0), 0);
+  return (total / students.length).toFixed(2);
+}
+
+let assDue = document.getElementById("assDue");
+assDue.innerText = getAssignmentsDueCount();
+
+function getAssignmentsDueCount() {
+  const students = getStudents();
+  return students.reduce((count, s) => count + (s.assignmentsDue || 0), 0);
+}
+
+let 
