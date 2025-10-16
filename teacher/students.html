@@ -13,31 +13,31 @@
             <img src="Screenshot 2025-10-05 222657.png" alt="curved edged square">
             <h1>EduGrade Pro</h1>
         </div>
-        <button class="home-btn">
+        <button class="home-btn" id="homeBtn">
             <i class="fa-regular fa-house"></i>
             Dashboard Home
         </button>
-        <button>
+        <button id="studentsBtn">
             <i class="fa-solid fa-users"></i>
             Students
         </button>
-        <button>
+        <button id="gradebookBtn">
             <i class="fa-regular fa-star"></i>
             Gradebook
         </button>
-        <button>
+        <button id="reportsBtn">
             <i class="fa-solid fa-chart-column"></i>
             Reports
         </button>
-        <button>
+        <button id="settingsBtn">
             <i class="fa-solid fa-gear"></i>
             Settings
         </button>
-        <button>
+        <button id="helpBtn">
             <i class="fa-solid fa-circle-question"></i>
             Help
         </button>
-        <button class="add-btn">
+        <button class="add-btn" id="addBtn">
             Add New Student
         </button>
     </aside>
@@ -87,7 +87,52 @@
                     </tr>
                 </tbody>
             </table>
+
+            <!-- Add Student Modal -->
+<div id="addStudentModal" class="modal">
+  <div class="modal-content">
+    <h3>Add New Student</h3>
+    <form id="addStudentForm">
+      <div class="form-group">
+        <label for="studentName">Full Name</label>
+        <input type="text" id="studentName" required>
+      </div>
+      <div class="form-group">
+        <label for="studentId">Student ID</label>
+        <input type="text" id="studentId" required>
+      </div>
+      <div class="form-group">
+        <label for="studentClass">Class</label>
+        <select id="studentClass" required>
+          <option value="">Select Class</option>
+          <option>JSS1</option>
+          <option>JSS2</option>
+          <option>JSS3</option>
+          <option>SS1</option>
+          <option>SS2</option>
+          <option>SS3</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="studentCourses">Enrolled Courses</label>
+        <input type="text" id="studentCourses" placeholder="e.g. Math, English, Physics" required>
+      </div>
+      <div class="form-group">
+        <label for="averageGrade">Average Grade (%)</label>
+        <input type="number" id="averageGrade" min="0" max="100" required>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="save-btn">Save Student</button>
+        <button type="button" id="cancelBtn" class="cancel-btn">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
         </div>
+
     </main>
+    <script src="teacher.js"></script>
 </body>
 </html>
