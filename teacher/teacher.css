@@ -412,86 +412,186 @@ aside button {
   transition: background-color 0.3s ease;
 }
 
-
-/* ---------- Modal ---------- */
+/* 
 .modal {
-  display: none; /* hidden by default */
+  display: none;
   position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
   z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.save-btn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.save-btn:hover {
+  background-color: #2563eb;
+} */
+
+
+/* add student style */
+
+/* ===========================
+   ADD STUDENT MODAL STYLES
+   =========================== */
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 2000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.55); /* Dim overlay */
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease;
+}
+
+.modal.show {
+  display: flex;
 }
 
 .modal-content {
-  background-color: #fff;
-  padding: 2rem;
+  background-color: #ffffff;
+  padding: 25px 30px;
   border-radius: 12px;
-  width: 400px;
+  width: 420px;
   max-width: 90%;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+  animation: scaleIn 0.3s ease;
+  position: relative;
 }
 
+/* Entry animation */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Header text */
 .modal-content h3 {
-  margin-bottom: 1rem;
   text-align: center;
+  margin-bottom: 20px;
+  color: #1e1e1e;
+  font-size: 20px;
+  font-weight: 700;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+
+/* Form layout */
+#addStudentForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .form-group {
-  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
 }
 
 .form-group label {
+  font-size: 14px;
   font-weight: 600;
-  margin-bottom: 0.3rem;
+  color: #333;
+  margin-bottom: 6px;
 }
 
 .form-group input,
 .form-group select {
-  padding: 0.5rem;
-  border-radius: 6px;
+  padding: 10px 12px;
   border: 1px solid #ccc;
-  font-size: 1rem;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #007bff;
+  box-shadow: 0px 0px 4px rgba(0, 123, 255, 0.3);
+}
+
+/* Buttons container */
 .form-actions {
   display: flex;
   justify-content: space-between;
-  margin-top: 1.5rem;
+  margin-top: 10px;
 }
 
+/* Save button */
 .save-btn {
-  background-color: #004080;
-  color: white;
+  background-color: #007bff;
+  color: #fff;
   border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
   cursor: pointer;
-}
-
-.cancel-btn {
-  background-color: transparent;
-  color: #333;
-  border: 1px solid #aaa;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .save-btn:hover {
-  background-color: #003366;
+  background-color: #0056b3;
+}
+
+/* Cancel button */
+.cancel-btn {
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .cancel-btn:hover {
-  background-color: #f2f2f2;
+  background-color: #f1f1f1;
+  border-color: #999;
 }
 
-
-/* add student style */
+/* Optional background blur */
+body.modal-open main {
+  filter: blur(3px);
+  pointer-events: none;
+  user-select: none;
+}
 
