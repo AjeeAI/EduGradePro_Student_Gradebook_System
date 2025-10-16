@@ -199,4 +199,97 @@ function getAssignmentsDueCount() {
   return students.reduce((count, s) => count + (s.assignmentsDue || 0), 0);
 }
 
-let 
+let searchInput = document.getElementById("searchInput");
+if (searchInput) {
+  searchInput.addEventListener("input", () => {
+    const searchTerm = searchInput.value.toLowerCase();
+    const students = getStudents();
+    const filteredStudents = students.filter(s => s.name.toLowerCase().includes(searchTerm));
+    renderStudentTable(filteredStudents);
+  });
+}
+
+function renderStudentTable(students) {
+  const tableBody = document.querySelector("table tbody");
+  if (!tableBody) return;
+  tableBody.innerHTML = "";
+
+  students.forEach((student, index) => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td class="stud-name">${student.name}</td>
+      <td>${student.id}</td>
+      <td>${student.class}</td>
+      <td class="action-td">
+        <button class="eyeBtn" data-index="${index}">
+          <i class="fa-regular fa-eye"></i>
+        </button>
+        <button class="editBtn" id="editBtn-${index}" data-index="${index}">
+          <i class="fa-solid fa-pen"></i>
+        </button>
+        <button class="deleteBtn" id="deleteBtn-${index}" data-index="${index}">
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
+      </td>
+    `;
+    tableBody.appendChild(row);
+  });
+}
+
+let searchInputtwo = document.getElementById("searchInputtwo");
+if (searchInputtwo) {
+  searchInputtwo.addEventListener("input", () => {
+    const searchTerm = searchInputtwo.value.toLowerCase();
+    const students = getStudents();
+    const filteredStudents = students.filter(s => s.name.toLowerCase().includes(searchTerm));
+    renderStudentTable(filteredStudents);
+  });
+}
+
+function renderStudentTable(students) {
+  const tableBody = document.querySelector("table tbody");
+  if (!tableBody) return;
+  tableBody.innerHTML = "";
+
+  students.forEach((student, index) => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td class="stud-name">${student.name}</td>
+      <td>${student.id}</td>
+      <td>${student.class}</td>
+      <td class="action-td">
+        <button class="eyeBtn" data-index="${index}">
+          <i class="fa-regular fa-eye"></i>
+        </button>
+        <button class="editBtn" id="editBtn-${index}" data-index="${index}">
+          <i class="fa-solid fa-pen"></i>
+        </button>
+        <button class="deleteBtn" id="deleteBtn-${index}" data-index="${index}">
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
+      </td>
+    `;
+    tableBody.appendChild(row);
+  });
+}
+
+
+// let editBtn = document.getElementById("editBtn-${index}");
+// if (editBtn) {
+//   editBtn.addEventListener("click", () => { 
+//     const index = parseInt(editBtn.dataset.index);
+//     const students = getStudents();
+//     const s = students[index];
+
+//     document.getElementById("studentName").value = s.name;
+//     document.getElementById("studentId").value = s.id;
+//     document.getElementById("studentClass").value = s.class;
+//     document.getElementById("studentCourses").value = s.courses;
+//     document.getElementById("averageGrade").value = s.grade;
+
+//     editingIndex = index;
+//     modal.style.display = "flex";
+//   });
+// }
+
+
