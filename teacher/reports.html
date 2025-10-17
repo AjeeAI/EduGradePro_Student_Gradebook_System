@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Reports</title>
+    <title>Reports - EduGrade Pro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="teacher.css">
 </head>
 <body>
@@ -25,25 +25,59 @@
             <i class="fa-regular fa-star"></i>
             Gradebook
         </button>
-        <button id="reportsBtn">
+        <button class="reportsBtn active" id="reportsBtn">
             <i class="fa-solid fa-chart-column"></i>
             Reports
         </button>
-        <button id="settingsBtn">
+        <button class="settingsBtn" id="settingsBtn">
             <i class="fa-solid fa-gear"></i>
             Settings
         </button>
-        <button id="helpBtn">
+        <button class="helpBtn" id="helpBtn">
             <i class="fa-solid fa-circle-question"></i>
             Help
         </button>
-        <button class="add-btn" id="addBtn">
-            Add New Student
-        </button>
     </aside>
+
     <main>
-        <h2>Coming Soon!</h2>
+        <h2>Reports Overview</h2>
+
+        <section id="reportStats">
+            <div class="report-card">
+                <h3>Average Grade</h3>
+                <p id="avgGrade">0%</p>
+            </div>
+            <div class="report-card">
+                <h3>Top Performing Course</h3>
+                <p id="topCourse">-</p>
+            </div>
+            <div class="report-card">
+                <h3>Lowest Performing Course</h3>
+                <p id="lowCourse">-</p>
+            </div>
+            <div class="report-card">
+                <h3>Students Graded</h3>
+                <p id="totalGraded">0</p>
+            </div>
+        </section>
+
+        <section id="reportTableSection">
+            <h3>Course Summary</h3>
+            <table id="reportTable">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Average</th>
+                        <th>Highest</th>
+                        <th>Lowest</th>
+                        <th>Students</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
     </main>
+
     <script src="teacher.js"></script>
 </body>
 </html>

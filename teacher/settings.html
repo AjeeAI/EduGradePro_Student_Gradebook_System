@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Settings</title>
+    <title>Settings - EduGrade Pro</title>
     <link rel="stylesheet" href="teacher.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
             <i class="fa-solid fa-chart-column"></i>
             Reports
         </button>
-        <button id="settingsBtn">
+        <button class="active" id="settingsBtn">
             <i class="fa-solid fa-gear"></i>
             Settings
         </button>
@@ -41,61 +41,51 @@
             Add New Student
         </button>
     </aside>
+
     <main>
         <h2>Settings</h2>
 
+        <!-- Profile Section -->
         <div class="settings-conts">
             <p class="profile">Profile Information</p>
             <div class="change-info">
-                <label for="full-name">
-                    Full Name
-                </label>
-                <input type="text" class="settings-info-input">
+                <label>Full Name</label>
+                <input type="text" id="fullName" class="settings-info-input">
             </div>
             <div class="change-info">
-                <label for="full-name">
-                    Email
-                </label>
-                <input type="text" class="settings-info-input">
+                <label>Email</label>
+                <input type="email" id="email" class="settings-info-input">
             </div>
             <div class="change-info">
-                <label for="full-name">
-                    Username
-                </label>
-                <input type="text" class="settings-info-input">
+                <label>Username</label>
+                <input type="text" id="username" class="settings-info-input">
             </div>
-
-            <button class="updateprofile" id="update">
+            <button class="updateprofile" id="updateProfileBtn">
                 Update Profile
             </button>
         </div>
 
+        <!-- Password Section -->
         <div class="settings-conts">
             <p class="profile">Change Password</p>
             <div class="change-info">
-                <label for="full-name">
-                    Current Password
-                </label>
-                <input type="text" class="settings-info-input">
+                <label>Current Password</label>
+                <input type="password" id="currentPassword" class="settings-info-input">
             </div>
             <div class="change-info">
-                <label for="full-name">
-                    New Password
-                </label>
-                <input type="text" class="settings-info-input">
+                <label>New Password</label>
+                <input type="password" id="newPassword" class="settings-info-input">
             </div>
             <div class="change-info">
-                <label for="full-name">
-                    Confim New Password
-                </label>
-                <input type="text" class="settings-info-input">
+                <label>Confirm New Password</label>
+                <input type="password" id="confirmPassword" class="settings-info-input">
             </div>
-
-            <button class="updateprofile" id="update">
+            <button class="updateprofile" id="changePasswordBtn">
                 Change Password
             </button>
         </div>
     </main>
-    <script src="./teacher.js"></script>
+
+    <script src="teacher.js"></script>
 </body>
 </html>

@@ -1,49 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Gradebook</title>
-    <link rel="stylesheet" href="teacher.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <title>Gradebook | EduGrade Pro</title>
+  <link rel="stylesheet" href="teacher.css">
 </head>
 <body>
-    <aside>
-        <div class="logo">
-            <img src="Screenshot 2025-10-05 222657.png" alt="curved edged square">
-            <h1>EduGrade Pro</h1>
+  <aside>
+    <div class="logo">
+      <img src="Screenshot 2025-10-05 222657.png" alt="logo">
+      <h1>EduGrade Pro</h1>
+    </div>
+    <button id="homeBtn"><i class="fa-regular fa-house"></i> Dashboard Home</button>
+    <button id="studentsBtn"><i class="fa-solid fa-users"></i> Students</button>
+    <button class="active" id="gradebookBtn"><i class="fa-regular fa-star"></i> Gradebook</button>
+    <button id="reportsBtn"><i class="fa-solid fa-chart-column"></i> Reports</button>
+    <button id="settingsBtn"><i class="fa-solid fa-gear"></i> Settings</button>
+    <button id="helpBtn"><i class="fa-solid fa-circle-question"></i> Help</button>
+    <button class="add-btn" id="addGradeBtn">Add/Update Grade</button>
+  </aside>
+
+  <main>
+    <header>
+      <h2>Gradebook</h2>
+      <div class="filters">
+        <select id="courseFilter">
+          <option value="all">All Courses</option>
+        </select>
+        <input type="text" id="searchStudent" placeholder="Search student...">
+      </div>
+    </header>
+
+    <section class="stats">
+      <div class="card"><h3 id="avgGrade">Average: --</h3></div>
+      <div class="card"><h3 id="highestGrade">Highest: --</h3></div>
+      <div class="card"><h3 id="lowestGrade">Lowest: --</h3></div>
+    </section>
+
+    <section class="table-section">
+      <table id="gradeTable">
+        <thead>
+          <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Grade (%)</th>
+            <th>Letter</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Modal for Adding/Editing Grade -->
+  <div id="gradeModal" class="modal">
+    <div class="modal-content">
+      <h3 id="modalTitle">Add/Update Grade</h3>
+      <form id="gradeForm">
+        <label for="studentSelect">Student:</label>
+        <select id="studentSelect"></select>
+
+        <label for="courseSelect">Course:</label>
+        <select id="courseSelect"></select>
+
+        <label for="gradeInput">Grade (%):</label>
+        <input type="number" id="gradeInput" min="0" max="100" required>
+
+        <div class="modal-actions">
+          <button type="submit" class="save-btn">Save</button>
+          <button type="button" class="cancel-btn" id="cancelModal">Cancel</button>
         </div>
-        <button class="home-btn" id="homeBtn">
-            <i class="fa-regular fa-house"></i>
-            Dashboard Home
-        </button>
-        <button id="studentsBtn">
-            <i class="fa-solid fa-users"></i>
-            Students
-        </button>
-        <button class="gradeBtn" id="gradebookBtn">
-            <i class="fa-regular fa-star"></i>
-            Gradebook
-        </button>
-        <button class="reportsBtn" id="reportsBtn">
-            <i class="fa-solid fa-chart-column"></i>
-            Reports
-        </button>
-        <button class="settingsBtn" id="settingsBtn">
-            <i class="fa-solid fa-gear"></i>
-            Settings
-        </button>
-        <button class="helpBtn" id="helpBtn">
-            <i class="fa-solid fa-circle-question"></i>
-            Help
-        </button>
-        <button class="add-btn" id="addBtn">
-            Add New Student
-        </button>
-    </aside>
-    <main>
-        <h2>Coming Soon!</h2>
-    </main>
-    <script src="teacher.js"></script>
+      </form>
+    </div>
+  </div>
+
+  <script src="teacher.js"></script>
+  
 </body>
 </html>
